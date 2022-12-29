@@ -1,0 +1,16 @@
+CRITICAL - 2022-12-28 18:55:42 --> require_once(C:\xampp\htdocs\ja_zerou\public\app/Routes/Teste.php): Failed to open stream: No such file or directory
+in APPPATH\Config\Routes.php on line 39.
+ 1 APPPATH\Config\Routes.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(C:\\xampp\\htdocs\\ja_zerou\\public\\app/Routes/Teste.php): Failed to open stream: No such file or directory', 'APPPATH\\Config\\Routes.php', 39)
+ 2 APPPATH\Config\Routes.php(39): require_once()
+ 3 SYSTEMPATH\CodeIgniter.php(787): require('APPPATH\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(428): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-28 18:55:57 --> require_once(C:\xampp\htdocs\ja_zerou\app\app/Routes/Teste.php): Failed to open stream: No such file or directory
+in APPPATH\Config\Routes.php on line 39.
+ 1 APPPATH\Config\Routes.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(C:\\xampp\\htdocs\\ja_zerou\\app\\app/Routes/Teste.php): Failed to open stream: No such file or directory', 'APPPATH\\Config\\Routes.php', 39)
+ 2 APPPATH\Config\Routes.php(39): require_once()
+ 3 SYSTEMPATH\CodeIgniter.php(787): require('APPPATH\\Config\\Routes.php')
+ 4 SYSTEMPATH\CodeIgniter.php(428): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
