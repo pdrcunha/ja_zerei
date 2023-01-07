@@ -36,8 +36,10 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
-    require(APPPATH . '/Routes/Index.php');
-
+    require(APPPATH . '/Routes/index.php');
+    require(APPPATH . '/Routes/usuarios.php');
+    require(APPPATH . '/Routes/console.php');
+    require(APPPATH . '/Routes/jogos.php');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

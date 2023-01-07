@@ -11,6 +11,7 @@ class Consoles extends BaseController
     {
         $this->model_consoles= new ConsolesModelos();
     }
+
     public function povoarBancoCrawler()
     {
         $link='https://bdjogos.com.br/consoles.php';
@@ -27,5 +28,22 @@ class Consoles extends BaseController
         $this->model_consoles->set_array($array_names);
         return $array_names;
     }
-}
 
+    ///CRUD
+    public function novo_console(){
+
+    }
+    public function visualizar_console($id){
+        
+    }
+    public function visualizar_todos_console(){
+        
+    }
+    public function editar_console($id){
+        
+    }
+    public function deletar_console($id){
+        
+    }
+
+}
