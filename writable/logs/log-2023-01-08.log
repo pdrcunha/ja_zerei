@@ -1,0 +1,208 @@
+ERROR - 2023-01-08 10:08:48 --> mysqli_sql_exception: Can't create table `ja_zerei`.`jogos_ja_zerei` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `j...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `j...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `j...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `j...')
+#4 C:\xampp\htdocs\ja_zerei\app\Database\Migrations\2023-01-07-175150_JogosJaZerei.php(27): CodeIgniter\Database\Forge->createTable('jogos_ja_zerei', true)
+#5 C:\xampp\htdocs\ja_zerei\system\Database\MigrationRunner.php(869): App\Database\Migrations\JogosJaZerei->up()
+#6 C:\xampp\htdocs\ja_zerei\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ja_zerei\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ja_zerei\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ja_zerei\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ja_zerei\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(918): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(345): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ja_zerei\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ja_zerei\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+ERROR - 2023-01-08 10:11:03 --> mysqli_sql_exception: Can't create table `ja_zerei`.`jogos_ja_zerei` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `j...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `j...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `j...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `j...')
+#4 C:\xampp\htdocs\ja_zerei\app\Database\Migrations\2023-01-07-175150_JogosJaZerei.php(27): CodeIgniter\Database\Forge->createTable('jogos_ja_zerei', true)
+#5 C:\xampp\htdocs\ja_zerei\system\Database\MigrationRunner.php(869): App\Database\Migrations\JogosJaZerei->up()
+#6 C:\xampp\htdocs\ja_zerei\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ja_zerei\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ja_zerei\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ja_zerei\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ja_zerei\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(918): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(345): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\ja_zerei\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\ja_zerei\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+CRITICAL - 2023-01-08 10:29:50 --> Too few arguments to function App\Controllers\Consoles::visualizar_console(), 0 passed in C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php on line 925 and exactly 1 expected
+in APPPATH\Controllers\Consoles.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->visualizar_console()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 10:30:03 --> Too few arguments to function App\Controllers\Consoles::visualizar_console(), 0 passed in C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php on line 925 and exactly 1 expected
+in APPPATH\Controllers\Consoles.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->visualizar_console()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 10:32:32 --> json_decode(): Argument #1 ($json) must be of type string, stdClass given
+in APPPATH\Controllers\Consoles.php on line 72.
+ 1 APPPATH\Controllers\Consoles.php(72): json_decode(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 10:48:15 --> syntax error, unexpected variable "$this"
+in APPPATH\Models\Consoles\ConsolesModelos.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Consoles\\ConsolesModelos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Consoles\\ConsolesModelos')
+ 3 APPPATH\Controllers\Consoles.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Consoles\\ConsolesModelos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Consoles->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:04:37 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:04:42 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:05:05 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:05:15 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:05:17 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:05:26 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:05:36 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:05:37 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:05:59 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 75.
+ 1 APPPATH\Controllers\Consoles.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:06:22 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+in APPPATH\Controllers\Consoles.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): Passing null to parameter #1 ($json) of type string is deprecated', 'APPPATH\\Controllers\\Consoles.php', 72)
+ 2 APPPATH\Controllers\Consoles.php(72): json_decode(null)
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:06:57 --> Attempt to read property "nome_console" on null
+in APPPATH\Controllers\Consoles.php on line 74.
+ 1 APPPATH\Controllers\Consoles.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome_console" on null', 'APPPATH\\Controllers\\Consoles.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:07:29 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+in APPPATH\Controllers\Consoles.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): Passing null to parameter #1 ($json) of type string is deprecated', 'APPPATH\\Controllers\\Consoles.php', 72)
+ 2 APPPATH\Controllers\Consoles.php(72): json_decode(null)
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:09:56 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+in APPPATH\Controllers\Consoles.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): Passing null to parameter #1 ($json) of type string is deprecated', 'APPPATH\\Controllers\\Consoles.php', 72)
+ 2 APPPATH\Controllers\Consoles.php(72): json_decode(null)
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:11:15 --> json_decode(): Argument #1 ($json) must be of type string, stdClass given
+in APPPATH\Controllers\Consoles.php on line 73.
+ 1 APPPATH\Controllers\Consoles.php(73): json_decode(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 11:11:25 --> json_decode(): Argument #1 ($json) must be of type string, stdClass given
+in APPPATH\Controllers\Consoles.php on line 73.
+ 1 APPPATH\Controllers\Consoles.php(73): json_decode(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 16:53:46 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Consoles.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 16:54:38 --> json_decode(): Argument #1 ($json) must be of type string, stdClass given
+in APPPATH\Controllers\Consoles.php on line 72.
+ 1 APPPATH\Controllers\Consoles.php(72): json_decode(Object(stdClass), false)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 17:13:14 --> Undefined array key "nome_console"
+in APPPATH\Controllers\Consoles.php on line 74.
+ 1 APPPATH\Controllers\Consoles.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome_console"', 'APPPATH\\Controllers\\Consoles.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 17:13:19 --> Undefined array key "ano_lancamento"
+in APPPATH\Controllers\Consoles.php on line 74.
+ 1 APPPATH\Controllers\Consoles.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ano_lancamento"', 'APPPATH\\Controllers\\Consoles.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-08 17:13:20 --> Undefined array key "ano_lancamento"
+in APPPATH\Controllers\Consoles.php on line 74.
+ 1 APPPATH\Controllers\Consoles.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ano_lancamento"', 'APPPATH\\Controllers\\Consoles.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Consoles->editar_console('10')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consoles))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

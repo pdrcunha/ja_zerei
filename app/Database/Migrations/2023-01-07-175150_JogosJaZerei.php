@@ -10,7 +10,8 @@ class JogosJaZerei extends Migration
     {
         $this->forge->addField([
             'id_ja_zerei'	=> ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
-            'fk_console'	=> ['type' => 'int', 'constraint' => 11],
+            'fk_console'	=> ['type' => 'int', 'constraint' => 11,'unsigned' => true],
+            // 'fk_user'	=> ['type' => 'int', 'constraint' => 11],
             'horas'	=>          ['type' => 'int', 'constraint' => 11,'null' => true],
             'nota_jogabilidade'	=> ['type' => 'int', 'constraint' => 11,'null' => true],
             'nota_historia'	=> ['type' => 'int', 'constraint' => 11],

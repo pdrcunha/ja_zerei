@@ -4,19 +4,19 @@ namespace App\Models\Consoles;
 
 use CodeIgniter\Model;
 
-class ConsolesModelos extends Model
+class JaZerei extends Model
 {
-    protected $table = 'consoles';
-    protected $primaryKey = 'id_console';
+    protected $table = 'jogos_ja_zerei';
+    protected $primaryKey = 'id_ja_zerei';
 
     protected $allowedFields = [
-        'id_console',
-        'nome_console',
-        'resumo',
-        'ano_lancamento',
-        'cpu',
-        'memoria',
-        'graficos'
+        'fk_console',
+        'horas',
+        'nota_jogabilidade',
+        'nota_historia',
+        'nota_visual',
+        'nota_diversão',
+        'obs'
     ];
 
 
@@ -27,6 +27,7 @@ class ConsolesModelos extends Model
     protected $updatedField = 'updated_at';
     protected $deletedField = 'deleted_at';
 
+
     public function set_one($dados)
     {
         try {
@@ -35,8 +36,7 @@ class ConsolesModelos extends Model
             $id = $this->insertID();
             return $id;
         } catch (\Throwable $th) {
-            echo( $th->getMessage());
-            exit;
+            return( $th->getMessage());
         }
     }
 
@@ -47,8 +47,7 @@ class ConsolesModelos extends Model
             $query=$this->first();
             return $query;
         } catch (\Throwable $th) {
-            echo( $th->getMessage());
-            exit;
+            return( $th->getMessage());
         }
     }
 
@@ -58,21 +57,18 @@ class ConsolesModelos extends Model
             $query=$this->findAll();
             return $query;
         } catch (\Throwable $th) {
-            echo( $th->getMessage());
-            exit;
+            return( $th->getMessage());
         }
     }
 
     public function edit_one($id,$dados)
     {
         try {
-
             $this->set($dados);
             $this->where($this->primaryKey, $id);
-            $this->update();
+            $this->update($dados);
         } catch (\Throwable $th) {
-            echo( $th->getMessage());
-            exit;
+            return( $th->getMessage());
         }
     }
 
@@ -82,22 +78,7 @@ class ConsolesModelos extends Model
             $this->where($this->primaryKey, $id);
             $this->delete();
         } catch (\Throwable $th) {
-            echo( $th->getMessage());
-            exit;
+            return( $th->getMessage());
         }
     }
-
-    public function set_array($array_dados)
-    {
-        try {
-            $this->insertBatch($array_dados);
-            
-            return ("ok");
-
-        } catch (\Throwable $th) {
-            echo( $th->getMessage());
-            exit;
-        }
-    }
-    
 }
