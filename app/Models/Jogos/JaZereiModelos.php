@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Models\Consoles;
+namespace App\Models\Jogos;
 
 use CodeIgniter\Model;
 
-class JaZerei extends Model
+class JaZereiModelos extends Model
 {
     protected $table = 'jogos_ja_zerei';
     protected $primaryKey = 'id_ja_zerei';
 
     protected $allowedFields = [
         'fk_console',
+        'nome_jogo',
         'horas',
         'nota_jogabilidade',
         'nota_historia',

@@ -1,8 +1,8 @@
 <?php
 
 //CRUD
-$routes->post('/novoconsole', 'Jogos::novo_ja_zerei');
-$routes->get('/visualizarconsole/{id}', 'Jogos::visualizar_ja_zerei');
-$routes->get('/visualizartodosJogos/{id}', 'Jogos::visualizar_todos_ja_zerei');
-$routes->put('/editarconsole/{id}', 'Jogos::editar_ja_zerei');
-$routes->delete('/deletarconsole/{id}', 'Jogos::deletar_ja_zerei');
+$routes->post('/novojazerei', 'Jogos::novo_ja_zerei');
+$routes->get('/visualizarjazerei/(:num)', 'Jogos::visualizar_ja_zerei/$1');
+$routes->get('/visualizartodosjazerei', 'Jogos::visualizar_todos_ja_zerei');
+$routes->put('/editarjazerei/(:num)', 'Jogos::editar_ja_zerei/$1');
+$routes->delete('/deletarjazerei/(:num)', 'Jogos::deletar_ja_zerei/$1');

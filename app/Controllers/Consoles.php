@@ -77,6 +77,7 @@ class Consoles extends BaseController
             return json_encode($error);
         }
 
+        $id=$this->model_consoles->edit_one($id,$dados);
 
         $success = ['message' => "Tudo certo o id $id foi alterado"];
         $this->response->setStatusCode(200);

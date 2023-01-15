@@ -12,6 +12,7 @@ class JogosJaZerei extends Migration
             'id_ja_zerei'	=> ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
             'fk_console'	=> ['type' => 'int', 'constraint' => 11,'unsigned' => true],
             // 'fk_user'	=> ['type' => 'int', 'constraint' => 11],
+            'nome_jogo'	=> ['type' => 'varchar', 'constraint' => 128,'null' => false],
             'horas'	=>          ['type' => 'int', 'constraint' => 11,'null' => true],
             'nota_jogabilidade'	=> ['type' => 'int', 'constraint' => 11,'null' => true],
             'nota_historia'	=> ['type' => 'int', 'constraint' => 11],
