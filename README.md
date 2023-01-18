@@ -1,54 +1,82 @@
-# CodeIgniter 4 Framework
+# API REST COM AUTENTIFICAÇÃO EM PHP COM CODEIGNITER
 
-## What is CodeIgniter?
+## Resumo !
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Ja zerei e uma api ultilizada para salvar jogos em que usuarios já zeraram.
+De forma simples e possivel fazer todo o CRUD de:
+Usuarios com autentificação;
+Consoles;
+E jogos já zerados;
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Porque ?
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+O intuito aqui era praticar meus conchecimentos com PHP, CI4, SQL e JWT. Deixando meu portifolio mais robusto :)
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+## Instalação do projeto, Config
 
-## Important Change with index.php
+Abra o arquivo C:\xampp\apache\conf\extra\httpd-vhosts.conf.bak em um editor ou bloco de notas e adicione o seguinte código no final do arquivo:
+<VirtualHost *:80>
+   ServerAdmin webmaster@local.jazerei.com
+   DocumentRoot "C:/xampp/htdocs/jazerei/public"
+   ServerName local.jazerei.com
+   ErrorLog "logs/local.jazerei.com-error.log"
+   CustomLog "logs/local.jazerei.com-access.log" common
+</VirtualHost>
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Abra o arquivo C:\Windows\System32\drivers\etc\hosts em um editor ou bloco de notas e adicione o seguinte comando ao final do arquivo: 127.0.0.1  		local.jazerei.com
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Com o xampp instalado e configurado em sua máquina, siga os seguintes passos:
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Extraia a pasta do projeto jazerei em C:/xampp/htdocs/;
+Inicie o Apache e MySQL em seu xampp;
+Abra o navegador e acesse local.jazerei.com
 
-## Repository Management
+## Instalação do banco
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Antes de tudo, pare o xampp e, em seguida, remova o ponto e vírgula inicial (;) do seu xampp/php/php.ini no código a seguir: ;extension=intl, e então reinicie seu xampp.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Crie um novo banco de dados em seu SGBD
+Abra o arquivo .env e altere as seguintes informações do seu banco de dados:
+   database.default.hostname = localhost
+   database.default.database = jazerei
+   database.default.username = root
+   database.default.password = 
+   database.default.DBDriver = MySQLi
+   database.default.DBPrefix =
 
-## Contributing
+## Importando tabelas com migrations e povando com seed
 
-We welcome contributions from the community.
+Execute o CMD na pasta principal do projeto e digite o comando php spark migrate, então a base de dados será criada;
+Ainda com o CMD aberto, é preciso digitar o comando php spark db:seed NOME_DO_ARQUIVO para cada nome de arquivo .php existente na pasta app/database/Seeds;
+Exemplo: php spark db:seed User
+Obs: Não se deve adicionar a extensão .php em NOME_DO_ARQUIVO;
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+LOGIN ->admin
+SENHA ->admin
 
-## Server Requirements
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+## Rotas
+Index: Apresentação do CI $routes->get('/', 'Home::index',['filter' => 'auth']);
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+#### Jogos
+$routes->post('/novojazerei', 'Jogos::novo_ja_zerei',['filter' => 'auth']);
+$routes->get('/visualizarjazerei/(:num)', 'Jogos::visualizar_ja_zerei/$1',['filter' => 'auth']);
+$routes->get('/visualizartodosjazerei', 'Jogos::visualizar_todos_ja_zerei',['filter' => 'auth']);
+$routes->put('/editarjazerei/(:num)', 'Jogos::editar_ja_zerei/$1',['filter' => 'auth']);
+$routes->delete('/deletarjazerei/(:num)', 'Jogos::deletar_ja_zerei/$1',['filter' => 'auth']);
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+#### Consoles
+Povoar Banco com nomes
+$routes->get('/povoarConsoles', 'Consoles::povoarBancoCrawler',['filter' => 'auth']);
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+$routes->post('/novoconsole', 'Consoles::novo_console',['filter' => 'auth']);
+$routes->get('/visualizar_console/(:num)', 'Consoles::visualizar_console/$1',['filter' => 'auth']);
+$routes->get('/visualizartodosconsoles', 'Consoles::visualizar_todos_console',['filter' => 'auth']);
+$routes->put('/editarconsole/(:num)', 'Consoles::editar_console/$1',['filter' => 'auth']);
+$routes->delete('/deletarconsole/(:num)', 'Consoles::deletar_console/$1',['filter' => 'auth']);
+
+#### Usuarios
+
+$routes->post('/novousuario', 'Usuarios::novo_usuario',['filter' => 'auth']);
+$routes->delete('/deletarusuario/(:num)', 'Usuarios::delete_user/$1',['filter' => 'auth']);
+$routes->post('/login', 'Usuarios::login');

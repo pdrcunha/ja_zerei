@@ -1,0 +1,127 @@
+CRITICAL - 2023-01-16 18:40:47 --> Class "app\Models\Usuarios\UsuariosModel" not found
+in APPPATH\Controllers\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-16 18:43:22 --> mysqli_sql_exception: Unknown column 'email' in 'field list' in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\ja_zerei\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ja_zerei\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ja_zerei\system\Model.php(695): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ja_zerei\app\Models\Usuarios\UsuariosModel.php(32): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php(32): App\Models\Usuarios\UsuariosModel->set_one(Array)
+#9 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(925): App\Controllers\Usuarios->novo_usuario()
+#10 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#11 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ja_zerei\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-01-16 18:44:03 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\ja_zerei\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ja_zerei\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ja_zerei\system\Model.php(695): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ja_zerei\app\Models\Usuarios\UsuariosModel.php(32): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php(32): App\Models\Usuarios\UsuariosModel->set_one(Array)
+#9 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(925): App\Controllers\Usuarios->novo_usuario()
+#10 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#11 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ja_zerei\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-01-16 18:44:49 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ja_zerei\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ja_zerei\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ja_zerei\app\Models\Usuarios\UsuariosModel.php(43): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php(48): App\Models\Usuarios\UsuariosModel->user_by_login(Array)
+#8 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(925): App\Controllers\Usuarios->login()
+#9 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#10 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ja_zerei\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-16 18:45:43 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ja_zerei\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ja_zerei\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ja_zerei\app\Models\Usuarios\UsuariosModel.php(43): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php(48): App\Models\Usuarios\UsuariosModel->user_by_login(Array)
+#8 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(925): App\Controllers\Usuarios->login()
+#9 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#10 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ja_zerei\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-16 18:47:36 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ja_zerei\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ja_zerei\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ja_zerei\app\Models\Usuarios\UsuariosModel.php(43): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php(48): App\Models\Usuarios\UsuariosModel->user_by_login(Array)
+#8 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(925): App\Controllers\Usuarios->login()
+#9 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#10 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ja_zerei\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-16 18:48:12 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ja_zerei\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ja_zerei\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ja_zerei\app\Models\Usuarios\UsuariosModel.php(43): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php(48): App\Models\Usuarios\UsuariosModel->user_by_login(Array)
+#8 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(925): App\Controllers\Usuarios->login()
+#9 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#10 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ja_zerei\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-01-16 18:48:32 --> mysqli_sql_exception: Illegal parameter data types varchar and row for operation '=' in C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ja_zerei\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ja_zerei\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ja_zerei\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ja_zerei\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ja_zerei\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ja_zerei\app\Models\Usuarios\UsuariosModel.php(43): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php(48): App\Models\Usuarios\UsuariosModel->user_by_login(Array)
+#8 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(925): App\Controllers\Usuarios->login()
+#9 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#10 C:\xampp\htdocs\ja_zerei\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ja_zerei\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-16 18:54:56 --> CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\ja_zerei\app\Controllers\Usuarios.php on line 63
+in SYSTEMPATH\API\ResponseTrait.php on line 90.
+ 1 APPPATH\Controllers\Usuarios.php(63): CodeIgniter\RESTful\ResourceController->respond('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiMiIsImVtYWlsIjoidGVzZUBmZG9mZC5jb20ifQ.9UfKiAdMpo3C2dLY4hUWfHqsfJh0khop2-tNZS2fS-8', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Usuarios->login()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-16 19:22:12 --> Undefined array key 2
+in APPPATH\Filters\Auth.php on line 35.
+ 1 APPPATH\Filters\Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Filters\\Auth.php', 35)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\Filters\Filters->run('C:\\', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
