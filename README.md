@@ -26,7 +26,7 @@ Abra o arquivo C:\xampp\apache\conf\extra\httpd-vhosts.conf.bak em um editor ou 
  ```
 
 Abra o arquivo C:\Windows\System32\drivers\etc\hosts em um editor ou bloco de notas e adicione o seguinte comando ao final do arquivo:
-127.0.0.1  		local.jazerei.com
+ ```127.0.0.1  		local.jazerei.com  ```
 
 Com o xampp instalado e configurado em sua máquina, siga os seguintes passos:
 
@@ -62,14 +62,16 @@ SENHA ->admin
 Index: Apresentação do CI $routes->get('/', 'Home::index',['filter' => 'auth']);
 
 #### Jogos
+ ```
 $routes->post('/novojazerei', 'Jogos::novo_ja_zerei',['filter' => 'auth']);
 $routes->get('/visualizarjazerei/(:num)', 'Jogos::visualizar_ja_zerei/$1',['filter' => 'auth']);
 $routes->get('/visualizartodosjazerei', 'Jogos::visualizar_todos_ja_zerei',['filter' => 'auth']);
 $routes->put('/editarjazerei/(:num)', 'Jogos::editar_ja_zerei/$1',['filter' => 'auth']);
 $routes->delete('/deletarjazerei/(:num)', 'Jogos::deletar_ja_zerei/$1',['filter' => 'auth']);
-
+ ```
 #### Consoles
 Povoar Banco com nomes
+ ```
 $routes->get('/povoarConsoles', 'Consoles::povoarBancoCrawler',['filter' => 'auth']);
 
 $routes->post('/novoconsole', 'Consoles::novo_console',['filter' => 'auth']);
@@ -77,9 +79,10 @@ $routes->get('/visualizar_console/(:num)', 'Consoles::visualizar_console/$1',['f
 $routes->get('/visualizartodosconsoles', 'Consoles::visualizar_todos_console',['filter' => 'auth']);
 $routes->put('/editarconsole/(:num)', 'Consoles::editar_console/$1',['filter' => 'auth']);
 $routes->delete('/deletarconsole/(:num)', 'Consoles::deletar_console/$1',['filter' => 'auth']);
-
+ ```
 #### Usuarios
-
+ ```
 $routes->post('/novousuario', 'Usuarios::novo_usuario',['filter' => 'auth']);
 $routes->delete('/deletarusuario/(:num)', 'Usuarios::delete_user/$1',['filter' => 'auth']);
 $routes->post('/login', 'Usuarios::login');
+ ```
