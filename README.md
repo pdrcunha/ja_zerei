@@ -15,16 +15,16 @@ O intuito aqui era praticar meus conchecimentos com PHP, CI4, SQL e JWT. Deixand
 ## Instalação do projeto, Config
 
 Abra o arquivo C:\xampp\apache\conf\extra\httpd-vhosts.conf.bak em um editor ou bloco de notas e adicione o seguinte código no final do arquivo:
-""<VirtualHost *:80>
+<VirtualHost *:80>/n
    ServerAdmin webmaster@local.jazerei.com
    DocumentRoot "C:/xampp/htdocs/jazerei/public"
    ServerName local.jazerei.com
    ErrorLog "logs/local.jazerei.com-error.log"
    CustomLog "logs/local.jazerei.com-access.log" common
-</VirtualHost>""
+</VirtualHost>
 
 Abra o arquivo C:\Windows\System32\drivers\etc\hosts em um editor ou bloco de notas e adicione o seguinte comando ao final do arquivo:
-" 127.0.0.1  		local.jazerei.com"
+127.0.0.1  		local.jazerei.com
 
 Com o xampp instalado e configurado em sua máquina, siga os seguintes passos:
 
