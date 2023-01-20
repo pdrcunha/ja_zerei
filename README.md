@@ -2,7 +2,7 @@
 
 ## Resumo !
 
-Ja zerei e uma api ultilizada para salvar jogos em que usuarios já zeraram.
+Ja zerei e uma api para salvar jogos em que os usuarios já zeraram.
 De forma simples e possivel fazer todo o CRUD de:
 Usuarios com autentificação;
 Consoles;
@@ -40,23 +40,25 @@ Antes de tudo, pare o xampp e, em seguida, remova o ponto e vírgula inicial (;)
 
 Crie um novo banco de dados em seu SGBD
 Abra o arquivo .env e altere as seguintes informações do seu banco de dados:
+ ```
    database.default.hostname = localhost
    database.default.database = jazerei
    database.default.username = root
    database.default.password = 
    database.default.DBDriver = MySQLi
    database.default.DBPrefix =
-
+ ```
 ## Importando tabelas com migrations e povando com seed
 
 Execute o CMD na pasta principal do projeto e digite o comando php spark migrate, então a base de dados será criada;
 Ainda com o CMD aberto, é preciso digitar o comando php spark db:seed NOME_DO_ARQUIVO para cada nome de arquivo .php existente na pasta app/database/Seeds;
 Exemplo: php spark db:seed User
 Obs: Não se deve adicionar a extensão .php em NOME_DO_ARQUIVO;
-
+ ```
+User padrão salvo na seed de usuarios.
 LOGIN ->admin
 SENHA ->admin
-
+ ```
 
 ## Rotas
 Index: Apresentação do CI $routes->get('/', 'Home::index',['filter' => 'auth']);
