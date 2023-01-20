@@ -12,6 +12,17 @@ E jogos já zerados;
 
 O intuito aqui era praticar meus conchecimentos com PHP, CI4, SQL e JWT. Deixando meu portifolio mais robusto :)
 
+## Oque pratiquei aqui ?
+
+PHP;
+MVC;
+Rotas;
+Filtros / Middlewares;
+Sql;
+JWT para token;
+
+Santa trinidade html, css e js;
+
 ## Instalação do projeto, Config
 
 Abra o arquivo C:\xampp\apache\conf\extra\httpd-vhosts.conf.bak em um editor ou bloco de notas e adicione o seguinte código no final do arquivo:
