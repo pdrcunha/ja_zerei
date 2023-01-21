@@ -21,8 +21,6 @@ Filtros / Middlewares;
 Sql;
 JWT para token;
 
-Santa trinidade html, css e js;
-
 ## Instalação do projeto, Config
 
 Abra o arquivo C:\xampp\apache\conf\extra\httpd-vhosts.conf.bak em um editor ou bloco de notas e adicione o seguinte código no final do arquivo:
@@ -72,7 +70,6 @@ SENHA ->admin
  ```
 
 ## Rotas
-Index: Apresentação do CI $routes->get('/', 'Home::index',['filter' => 'auth']);
 
 #### Jogos
  ```
